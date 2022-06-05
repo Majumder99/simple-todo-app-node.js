@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"
+      integrity="sha512-mx0L9xs+R5jFQ6OoBbS9oOfdPyymQXsrSAjJ8rncuCxA9FPPrlrCxrr8Xwo+N246jOgHtIPBR0eF61OQuPSoDg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>My Todo list</h1>
+    <div id="todo-table">
+      <form method="post">
+        <input type="text" name="item" placeholder="Add new item..." required />
+        <button type="submit">Add Item</button>
+      </form>
+      <ul>
+        <% for(var i = 0 ; i < todos.length; i++){ %>
+        <li><%= todos[i].item %></li>
+        <% } %>
+      </ul>
+    </div>
+  </body>
+</html>
